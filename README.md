@@ -73,6 +73,6 @@ doc.to_xml
 * Ronaldo de Sousa Araujo ([ronaldoaraujo](https://github.com/ronaldoaraujo))
 * Lucas Augusto Correa ([correalucas](https://github.com/correalucas))
 
-== Copyright
+## Copyright
 
 Copyright (c) 2017 NFeGeral. Leia LICENSE para mais detalhes.
