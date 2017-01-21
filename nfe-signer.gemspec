@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Assinador para Nota Fiscal Eletronica"
   spec.description   = "Gem criada para interagir com o sistema de notas fiscais eletronicas do governo brasileiro"
   spec.homepage      = "http://www.nfegeral.com.br"
+  spec.licenses      = ["MIT"]
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
