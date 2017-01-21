@@ -1,3 +1,4 @@
+require "openssl"
 require "spec_helper"
 
 describe Nfe::Signer do
@@ -12,7 +13,7 @@ describe Nfe::Signer do
     cert = OpenSSL::X509::Certificate.new(File.read("#{fixtures_path}/cert.pem"))
     signature_value = "L2l4qEb/rZ9Lg3zY8PqfmjQmGLLx/P02ALSbyqadt2UfHy5LoBpajkyiTHj7MgXlXVWOPI8Afi2djZIy5OmQMVeB7hA/NQzr5h7G7sxFE93hE/OqFA+u6kTeLeC34vFNWon0brBl40v1OlqNNUqmoDMuObYKy0YRppEJvW59Ooc="
 
-    doc = File.open("#{fixtures_path}/Nfe.xml") { |f| Nfe::Signer(f) }
+    doc = File.open("#{fixtures_path}/nfe.xml") { |f| Nfe::Signer(f) }
     doc.sign!(key, cert)
     doc.remove_namespaces!
 
