@@ -19,7 +19,7 @@ Install
 Se você estiver usando o `Bundler`, basta colocar essa linha no seu Gemfile:
 
 ```ruby
-gem 'ruby_marks'
+gem 'nfe-signer'
 ```
 
 Em seguida, execute o comando bundle install:
@@ -75,4 +75,4 @@ doc.to_xml
 
 ## Copyright
 
-Copyright (c) 2017 NFeGeral. Leia LICENSE para mais detalhes.
+Copyright (c) 2017 NFe Geral. Leia LICENSE para mais detalhes.
