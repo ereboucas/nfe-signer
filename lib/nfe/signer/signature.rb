@@ -69,15 +69,15 @@ module Nfe
       end
 
       def reference
-        infNFe = @document.at_css("infNFe")
+        inf = @document.at_xpath("//*[@Id]")
 
         # Calculate digest
-        xml_canon = infNFe.canonicalize(Nokogiri::XML::XML_C14N_EXCLUSIVE_1_0)
+        xml_canon = inf.canonicalize(Nokogiri::XML::XML_C14N_EXCLUSIVE_1_0)
         xml_digest = Base64.encode64(OpenSSL::Digest::SHA1.digest(xml_canon)).strip
 
         # Create Reference
         node = Nokogiri::XML::Node.new('Reference', @document)
-        node['URI'] = "##{infNFe['Id']}"
+        node['URI'] = "##{inf['Id']}"
         node.add_child transforms
 
         # Add Digest
